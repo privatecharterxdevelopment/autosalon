@@ -279,7 +279,7 @@
           <div class="contact-info">
             <div class="contact-item">
               <div class="contact-item-label">Email</div>
-              <a href="mailto:info@autosalon-schweiz.ch" class="contact-item-value">info@autosalon-schweiz.ch</a>
+              <a href="mailto:info@autosalon-schweiz.com" class="contact-item-value">info@autosalon-schweiz.com</a>
             </div>
             <div class="contact-item">
               <div class="contact-item-label">Standort</div>
@@ -287,10 +287,10 @@
             </div>
           </div>
         </div>
-        <form class="contact-form fade-in" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:#fff;font-size:1.25rem;text-align:center;padding:3rem 0;\'>Vielen Dank für Ihre Nachricht.<br>Wir melden uns in Kürze.</p>';">
-          <input type="text" placeholder="Ihr Name" required>
-          <input type="email" placeholder="Ihre E-Mail" required>
-          <select>
+        <form class="contact-form fade-in" id="contactForm" onsubmit="event.preventDefault(); var n=this.elements['name'].value,e=this.elements['email'].value,f=this.elements['car'].value,m=this.elements['message'].value; var subject='Anfrage von '+n+(f?' – '+f:''); var body='Name: '+n+'%0D%0AE-Mail: '+e+(f?'%0D%0AFahrzeug: '+f:'')+'%0D%0A%0D%0A'+m; window.location.href='mailto:info@autosalon-schweiz.com?subject='+encodeURIComponent(subject)+'&body='+body; this.innerHTML='<p style=\'color:#fff;font-size:1.25rem;text-align:center;padding:3rem 0;\'>Vielen Dank für Ihre Nachricht.<br>Wir melden uns in Kürze.</p>';">
+          <input type="text" name="name" placeholder="Ihr Name" required>
+          <input type="email" name="email" placeholder="Ihre E-Mail" required>
+          <select name="car">
             <option value="" disabled selected>Fahrzeug auswählen (optional)</option>
             <option>Lamborghini Huracán LP 610-4</option>
             <option>Brabus Vanish 1:1</option>
@@ -302,7 +302,7 @@
             <option>Maybach 57 S FAB Design</option>
             <option>Anderes Fahrzeug</option>
           </select>
-          <textarea rows="4" placeholder="Ihre Nachricht"></textarea>
+          <textarea name="message" rows="4" placeholder="Ihre Nachricht"></textarea>
           <button type="submit" class="btn btn-primary btn-arrow" style="width:100%;justify-content:center;">Nachricht Senden </button>
         </form>
       </div>
@@ -330,7 +330,7 @@
         <div>
           <h4>Kontakt</h4>
           <ul class="footer-links">
-            <li><a href="mailto:info@autosalon-schweiz.ch">info@autosalon-schweiz.ch</a></li>
+            <li><a href="mailto:info@autosalon-schweiz.com">info@autosalon-schweiz.com</a></li>
             <li><a>Zürich, Schweiz</a></li>
           </ul>
         </div>
