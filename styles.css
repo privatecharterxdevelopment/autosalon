@@ -194,9 +194,11 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    url('images/hero-bg.jpg') center center / cover no-repeat;
+    url('images/hero-bg.jpg') 85% center / 90% auto no-repeat,
+    #080808;
   transform: scale(1.03);
   animation: heroZoom 30s ease-in-out infinite alternate;
+  filter: brightness(1.15) contrast(0.95);
 }
 
 .hero-bg::before {
@@ -204,7 +206,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, rgba(8,8,8,0.97) 0%, rgba(8,8,8,0.85) 30%, rgba(8,8,8,0.4) 55%, rgba(8,8,8,0.2) 75%, rgba(8,8,8,0.5) 100%);
+    linear-gradient(to right, #080808 0%, #080808 35%, rgba(8,8,8,0.85) 45%, rgba(8,8,8,0.4) 58%, rgba(8,8,8,0.1) 72%, transparent 88%);
 }
 
 @keyframes heroZoom {
@@ -394,9 +396,10 @@ ul { list-style: none; }
   z-index: 4;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3rem;
   padding: 1.5rem 2rem;
+  padding-left: clamp(2rem, 5vw, 6rem);
   background: rgba(8,8,8,0.6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -1309,7 +1312,7 @@ a.contact-item-value:hover {
   .nav-toggle { display: flex; }
   .hero h1 { font-size: 2.5rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
-  .hero-bottom-bar { gap: 1.5rem; padding: 1.25rem 1rem; }
+  .hero-bottom-bar { gap: 1.5rem; padding: 1.25rem 1rem; padding-left: 1.5rem; }
   .hero-stat .number { font-size: 1.5rem; }
   .hero-stat-divider { height: 30px; }
   .car-grid { grid-template-columns: 1fr; }
@@ -1326,6 +1329,6 @@ a.contact-item-value:hover {
   .detail-specs { grid-template-columns: 1fr; }
   .detail-gallery { grid-template-columns: 1fr; }
   .about-features { grid-template-columns: 1fr; }
-  .hero-bottom-bar { gap: 1rem; }
+  .hero-bottom-bar { gap: 1rem; padding-left: 1rem; }
   .hero-stat .number { font-size: 1.25rem; }
 }
