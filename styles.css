@@ -1312,7 +1312,7 @@ a.contact-item-value:hover {
     border-bottom: 1px solid var(--border);
   }
   .nav-toggle { display: flex; }
-  .hero-bg { background-position: 55% bottom; background-size: 150% auto; }
+  .hero-bg { background-position: 95% bottom; background-size: 150% auto; }
   .hero h1 { font-size: 2.5rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .hero-bottom-bar { gap: 1.5rem; padding: 1.25rem 1rem; padding-left: 1.5rem; }
@@ -1332,7 +1332,7 @@ a.contact-item-value:hover {
   .detail-specs { grid-template-columns: 1fr; }
   .detail-gallery { grid-template-columns: 1fr; }
   .about-features { grid-template-columns: 1fr; }
-  .hero-bg { background-position: 45% bottom; background-size: 180% auto; }
+  .hero-bg { background-position: 100% bottom; background-size: 180% auto; }
   .hero-bottom-bar { gap: 1rem; padding-left: 1rem; }
   .hero-stat .number { font-size: 1.25rem; }
 }
