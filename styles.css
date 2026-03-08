@@ -193,9 +193,11 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    url('images/hero-bg.jpg') 85% center / 90% auto no-repeat,
-    #000000;
+  background-image: url('images/hero-bg.jpg');
+  background-position: 85% center;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-color: #000000;
   transform: scale(1.03);
   animation: heroZoom 30s ease-in-out infinite alternate;
   filter: brightness(1.15) contrast(0.95);
